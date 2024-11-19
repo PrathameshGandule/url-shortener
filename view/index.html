@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL SHORTENER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>my url shortener</h1>
+
+        <div class="card">
+            <h2>Paste the URL here to be shortened</h2>
+            <div class="input-group">
+                <input type="url" id="long-url" placeholder="Enter the link here" required>
+                <button onclick="shortenURL()">Shorten URL</button>
+            </div>
+            <div id="shortened-result" class="result-container">
+                <div class="url-display">
+                    <span>Shortened URL:</span>
+                    <span id="shortened-url" class="url-text"></span>
+                    <button onclick="copyToClipboard('shortened-url')" class="copy-button">Copy</button>
+                    <span id="shortened-copy-success" class="success-message">Copied!</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Paste the short-url here to reveal long-url</h2>
+            <div class="input-group">
+                <input type="url" id="short-url" placeholder="Enter the short-url here" required>
+                <button onclick="revealLongUrl()">Reveal Url</button>
+            </div>
+            <div id="revealed-result" class="result-container">
+                <div class="url-display">
+                    <span>Long URL:</span>
+                    <span id="revealed-url" class="url-text"></span>
+                    <button onclick="copyToClipboard('revealed-url')" class="copy-button">Copy</button>
+                    <span id="revealed-copy-success" class="success-message">Copied!</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

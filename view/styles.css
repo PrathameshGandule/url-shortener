@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+h1 {
+    color: #2196F3;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+h2 {
+    color: #333;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.input-group {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 5px;
+}
+input[type="url"], input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+button:hover {
+    background-color: #1976D2;
+}
+.copy-button {
+    background-color: #4CAF50;
+}
+.copy-button:hover {
+    background-color: #388E3C;
+}
+.result-container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-radius: 4px;
+    display: none;
+}
+.url-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 10px;
+}
+.url-text {
+    flex-grow: 1;
+    word-break: break-all;
+}
+.success-message {
+    color: #4CAF50;
+    font-size: 14px;
+    margin-left: 10px;
+    display: none;
+}
