@@ -38,7 +38,9 @@ async function revealUrl(req, res){
 
         const url = await UrlModel.findOne({ shortUrl: shortUrl1 });
         if(!url){
-            return res.status(400).send('Short url not found!');
+            return res.status(400).send({
+		longUrl: "Short Url not found!"
+	    });
         }
 
         res.status(200).json({
@@ -46,7 +48,9 @@ async function revealUrl(req, res){
         })
     } catch(error) {
         console.log(error);
-        res.status(500).send('Internal Server Error');
+        res.status(500).send({
+		longUrl: "Internal Server Error!!!"
+	});
     }
 } 
 
