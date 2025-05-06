@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(path.resolve(), 'view/index.html'));
 });
 
+app.get('/test', (req, res) => {
+  res.send("ok");
+});
+
 app.use('/api', apiRoutes);
 app.use('/', redirectRouter);
 
